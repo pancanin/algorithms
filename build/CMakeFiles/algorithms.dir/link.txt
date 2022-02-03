@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/algorithms.dir/main.cpp.o CMakeFiles/algorithms.dir/softuni-algo/recursion/Recursion.cpp.o  -o algorithms 

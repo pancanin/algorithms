@@ -1,0 +1,3 @@
+/home/ubuntu/Projects/algorithms/build/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/Projects/algorithms/build/CMakeFiles/edit_cache.dir
+/home/ubuntu/Projects/algorithms/build/CMakeFiles/algorithms.dir

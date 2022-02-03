@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ubuntu/Projects/algorithms/main.cpp
+iostream
+-
+softuni-algo/recursion/Recursion.h
+/home/ubuntu/Projects/algorithms/softuni-algo/recursion/Recursion.h
+
+/home/ubuntu/Projects/algorithms/softuni-algo/recursion/Recursion.cpp
+Recursion.h
+/home/ubuntu/Projects/algorithms/softuni-algo/recursion/Recursion.h
+
+/home/ubuntu/Projects/algorithms/softuni-algo/recursion/Recursion.h
+cstdint
+-
+cstdlib
+-
+
