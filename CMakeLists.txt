@@ -8,6 +8,7 @@ add_executable(${PROJECT_NAME}
 	${DIR}/main.cpp
 	${DIR}/softuni-algo/recursion/Recursion.h
 	${DIR}/softuni-algo/recursion/Recursion.cpp
+	${DIR}/helpers/Helpers.h
 )
 
 set_target_properties(
@@ -18,3 +19,4 @@ set_target_properties(
         CXX_EXTENSIONS NO
 )
 
+target_include_directories(${PROJECT_NAME} PRIVATE ${DIR})
