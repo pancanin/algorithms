@@ -76,15 +76,15 @@ void Recursion::generateNchooseKCombinations(int32_t* arr, int32_t* choiceArr, s
 }
 
 void Recursion::put8Queens(void (*consumer)(char** arr, int8_t n)) {
-	const size_t BOARD_SIZE = 8;
+	const size_t BOARD_SIZE = 15;
 	char** board = new char*[BOARD_SIZE];
 
 	for (int i = 0; i < BOARD_SIZE; i++) {
 		board[i] = new char[BOARD_SIZE];
 	}
 
-	std::unordered_set<int32_t> attackedCols;
-	std::unordered_set<int32_t> attackedDiagonals;
+	bool* attackedCols = new bool[BOARD_SIZE + 1];
+	bool* attackedDiagonals = new bool[BOARD_SIZE * 4];
 
 	put8Queens(board, 0, 0, BOARD_SIZE, attackedCols, attackedDiagonals, consumer);
 
@@ -93,14 +93,16 @@ void Recursion::put8Queens(void (*consumer)(char** arr, int8_t n)) {
 	}
 
 	delete[] board;
+	delete[] attackedCols;
+	delete[] attackedDiagonals;
 }
 
 void Recursion::put8Queens(char** board,
 		int8_t row,
 		int8_t col,
 		int8_t boardSize,
-		std::unordered_set<int32_t>& attackedCols,
-		std::unordered_set<int32_t>& attackedDiagonals,
+		bool* attackedCols,
+		bool* attackedDiagonals,
 		void (*consumer)(char** arr, int8_t n)) {
 
 	if (row >= boardSize) {
@@ -109,21 +111,22 @@ void Recursion::put8Queens(char** board,
 	}
 
 	for (uint8_t i = 0; i < boardSize; i++) {
-		if (attackedCols.find(i) != attackedCols.end() || attackedDiagonals.find(i - row) != attackedDiagonals.end() ||
-				attackedDiagonals.find(boardSize + row + i) != attackedDiagonals.end()) {
+		size_t LRDiagonalIdx = i - row;
+		size_t RLDiagonalIdx = boardSize + row + i;
+		if (attackedCols[i] || attackedDiagonals[LRDiagonalIdx] || attackedDiagonals[RLDiagonalIdx]) {
 			continue;
 		}
 
 		board[row][col] = '*';
-		attackedCols.insert(i);
-		attackedDiagonals.insert(i - row);
-		attackedDiagonals.insert(boardSize + row + i);
+		attackedCols[i] = true;
+		attackedDiagonals[LRDiagonalIdx] = true;
+		attackedDiagonals[RLDiagonalIdx] = true;
 
 		put8Queens(board, row + 1, i, boardSize, attackedCols, attackedDiagonals, consumer);
 
-		attackedCols.erase(i);
-		attackedDiagonals.erase(i - row);
-		attackedDiagonals.erase(boardSize + row + i);
+		attackedCols[i] = false;
+		attackedDiagonals[LRDiagonalIdx] = false;
+		attackedDiagonals[RLDiagonalIdx] = false;
 		board[row][col] = '\0';
 	}
 }
