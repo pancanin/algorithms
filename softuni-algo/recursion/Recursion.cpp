@@ -75,20 +75,19 @@ void Recursion::generateNchooseKCombinations(int32_t* arr, int32_t* choiceArr, s
 	}
 }
 
-void Recursion::put8Queens(void (*consumer)(char** arr, int8_t n)) {
-	const size_t BOARD_SIZE = 15;
-	char** board = new char*[BOARD_SIZE];
+void Recursion::put8Queens(const uint8_t n, void (*consumer)(char** arr, int8_t n)) {
+	char** board = new char*[n];
 
-	for (int i = 0; i < BOARD_SIZE; i++) {
-		board[i] = new char[BOARD_SIZE];
+	for (int i = 0; i < n; i++) {
+		board[i] = new char[n];
 	}
 
-	bool* attackedCols = new bool[BOARD_SIZE + 1];
-	bool* attackedDiagonals = new bool[BOARD_SIZE * 4];
+	bool* attackedCols = new bool[n + 1];
+	bool* attackedDiagonals = new bool[n * 2];
 
-	put8Queens(board, 0, 0, BOARD_SIZE, attackedCols, attackedDiagonals, consumer);
+	put8Queens(board, 0, 0, n, attackedCols, attackedDiagonals, consumer);
 
-	for (int i = 0; i < BOARD_SIZE; i++) {
+	for (int i = 0; i < n; i++) {
 		delete[] board[i];
 	}
 

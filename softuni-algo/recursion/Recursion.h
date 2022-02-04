@@ -12,11 +12,16 @@ public:
 	Recursion() = default;
 
 	int64_t sum(int32_t const* arr, size_t n);
+
 	uint64_t factoriel(const uint8_t n);
+
 	std::string drawing(const uint8_t n);
+
 	void generate01(const uint8_t n, void (*consumer)(bool* arr, size_t n));
+
 	void generateNchooseKCombinations(const uint8_t n, const uint8_t k, void (*consumer)(int32_t* arr, size_t n));
-	void put8Queens(void (*consumer)(char** arr, int8_t n));
+
+	void put8Queens(const uint8_t n, void (*consumer)(char** arr, int8_t n));
 private:
 	int64_t sum(int32_t const* arr, size_t idx, size_t n);
 	uint64_t factoriel(const uint8_t current, const uint8_t n);
