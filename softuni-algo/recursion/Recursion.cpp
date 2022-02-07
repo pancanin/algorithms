@@ -76,22 +76,14 @@ void Recursion::generateNchooseKCombinations(int32_t* arr, int32_t* choiceArr, s
 }
 
 void Recursion::put8Queens(const uint8_t n, void (*consumer)(char** arr, int8_t n)) {
-	char** board = new char*[n];
-
-	for (int i = 0; i < n; i++) {
-		board[i] = new char[n];
-	}
+	char** board = createMatrix<char>(n, n);
 
 	bool* attackedCols = new bool[n + 1];
 	bool* attackedDiagonals = new bool[n * 2];
 
 	put8Queens(board, 0, 0, n, attackedCols, attackedDiagonals, consumer);
 
-	for (int i = 0; i < n; i++) {
-		delete[] board[i];
-	}
-
-	delete[] board;
+	deleteMatrix<char>(board, n);
 	delete[] attackedCols;
 	delete[] attackedDiagonals;
 }
@@ -116,7 +108,7 @@ void Recursion::put8Queens(char** board,
 			continue;
 		}
 
-		board[row][col] = '*';
+		board[row][i] = '*';
 		attackedCols[i] = true;
 		attackedDiagonals[LRDiagonalIdx] = true;
 		attackedDiagonals[RLDiagonalIdx] = true;
@@ -126,6 +118,78 @@ void Recursion::put8Queens(char** board,
 		attackedCols[i] = false;
 		attackedDiagonals[LRDiagonalIdx] = false;
 		attackedDiagonals[RLDiagonalIdx] = false;
-		board[row][col] = '\0';
+		board[row][i] = '\0';
 	}
+}
+
+void Recursion::findAllPathsInLabyrinth(
+			char** labyrinth,
+			uint8_t width,
+			uint8_t height,
+			void (*consumer)(std::stack<char> path),
+			uint8_t startRow,
+			uint8_t startCol
+) {
+	std::stack<char> path;
+	bool** visited = createMatrix<bool>(width, height);
+
+	findAllPathsInLabyrinth(
+			labyrinth,
+			visited,
+			width,
+			height,
+			path,
+			consumer,
+			startRow,
+			startCol,
+			'S'
+	);
+
+	deleteMatrix(visited, width);
+}
+
+void Recursion::findAllPathsInLabyrinth(
+			char** labyrinth,
+			bool** visited,
+			uint8_t width,
+			uint8_t height,
+			std::stack<char>& currentPath,
+			void (*consumer)(std::stack<char> path),
+			uint8_t currentRow,
+			uint8_t currentCol,
+			char currentDirection
+) {
+	// Test out of bounds
+	if (currentRow >= height || currentCol >= width || currentRow < 0 || currentCol < 0) {
+		return;
+	}
+
+	// Have we hit a wall
+	if (labyrinth[currentRow][currentCol] == '*') {
+		return;
+	}
+
+	// Is it already visited?
+	if (visited[currentRow][currentCol]) {
+		return;
+	}
+
+	// Have we reached the exit?
+	if (labyrinth[currentRow][currentCol] == 'e') {
+		currentPath.push(currentDirection);
+		consumer(currentPath);
+		currentPath.pop();
+		return;
+	}
+
+	currentPath.push(currentDirection);
+	visited[currentRow][currentCol] = true;
+
+	findAllPathsInLabyrinth(labyrinth, visited, width, height, currentPath, consumer, currentRow, currentCol + 1, 'R');
+	findAllPathsInLabyrinth(labyrinth, visited, width, height, currentPath, consumer, currentRow, currentCol - 1, 'L');
+	findAllPathsInLabyrinth(labyrinth, visited, width, height, currentPath, consumer, currentRow + 1, currentCol, 'D');
+	findAllPathsInLabyrinth(labyrinth, visited, width, height, currentPath, consumer, currentRow - 1, currentCol, 'U');
+
+	currentPath.pop();
+	visited[currentRow][currentCol] = false;
 }

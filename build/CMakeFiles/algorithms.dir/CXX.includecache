@@ -6,27 +6,17 @@
 
 #IncludeRegexTransform: 
 
-../helpers/Helpers.h
+/home/ubuntu/Projects/algorithms/main.cpp
 iostream
 -
 string
 -
-cstdlib
+chrono
 -
-
-/home/ubuntu/Projects/algorithms/softuni-algo/recursion/Recursion.cpp
-Recursion.h
+queue
+-
+softuni-algo/recursion/Recursion.h
 /home/ubuntu/Projects/algorithms/softuni-algo/recursion/Recursion.h
-cassert
--
-cmath
--
-string
--
-iostream
--
-helpers/Helpers.h
-/home/ubuntu/Projects/algorithms/softuni-algo/recursion/helpers/Helpers.h
 
 /home/ubuntu/Projects/algorithms/softuni-algo/recursion/Recursion.h
 cstdint
@@ -38,5 +28,7 @@ string
 vector
 -
 unordered_set
+-
+stack
 -
 
