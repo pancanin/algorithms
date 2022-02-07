@@ -8,6 +8,8 @@ add_executable(${PROJECT_NAME}
 	${DIR}/main.cpp
 	${DIR}/softuni-algo/recursion/Recursion.h
 	${DIR}/softuni-algo/recursion/Recursion.cpp
+	${DIR}/softuni-algo/sorting/Sorting.h
+	${DIR}/softuni-algo/sorting/Sorting.cpp
 	${DIR}/helpers/Helpers.h
 )
 

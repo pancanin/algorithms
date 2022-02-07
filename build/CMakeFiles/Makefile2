@@ -74,12 +74,12 @@ clean: CMakeFiles/algorithms.dir/clean
 CMakeFiles/algorithms.dir/all:
 	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/depend
 	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/Projects/algorithms/build/CMakeFiles --progress-num=1,2,3 "Built target algorithms"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/Projects/algorithms/build/CMakeFiles --progress-num=1,2,3,4 "Built target algorithms"
 .PHONY : CMakeFiles/algorithms.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/algorithms.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/Projects/algorithms/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/Projects/algorithms/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/algorithms.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/Projects/algorithms/build/CMakeFiles 0
 .PHONY : CMakeFiles/algorithms.dir/rule

@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/algorithms.dir/main.cpp.o CMakeFiles/algorithms.dir/softuni-algo/recursion/Recursion.cpp.o  -o algorithms 
+/usr/bin/c++     CMakeFiles/algorithms.dir/main.cpp.o CMakeFiles/algorithms.dir/softuni-algo/recursion/Recursion.cpp.o CMakeFiles/algorithms.dir/softuni-algo/sorting/Sorting.cpp.o  -o algorithms 

@@ -177,6 +177,33 @@ softuni-algo/recursion/Recursion.cpp.s:
 	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/softuni-algo/recursion/Recursion.cpp.s
 .PHONY : softuni-algo/recursion/Recursion.cpp.s
 
+softuni-algo/sorting/Sorting.o: softuni-algo/sorting/Sorting.cpp.o
+
+.PHONY : softuni-algo/sorting/Sorting.o
+
+# target to build an object file
+softuni-algo/sorting/Sorting.cpp.o:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/softuni-algo/sorting/Sorting.cpp.o
+.PHONY : softuni-algo/sorting/Sorting.cpp.o
+
+softuni-algo/sorting/Sorting.i: softuni-algo/sorting/Sorting.cpp.i
+
+.PHONY : softuni-algo/sorting/Sorting.i
+
+# target to preprocess a source file
+softuni-algo/sorting/Sorting.cpp.i:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/softuni-algo/sorting/Sorting.cpp.i
+.PHONY : softuni-algo/sorting/Sorting.cpp.i
+
+softuni-algo/sorting/Sorting.s: softuni-algo/sorting/Sorting.cpp.s
+
+.PHONY : softuni-algo/sorting/Sorting.s
+
+# target to generate assembly for a file
+softuni-algo/sorting/Sorting.cpp.s:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/softuni-algo/sorting/Sorting.cpp.s
+.PHONY : softuni-algo/sorting/Sorting.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +219,9 @@ help:
 	@echo "... softuni-algo/recursion/Recursion.o"
 	@echo "... softuni-algo/recursion/Recursion.i"
 	@echo "... softuni-algo/recursion/Recursion.s"
+	@echo "... softuni-algo/sorting/Sorting.o"
+	@echo "... softuni-algo/sorting/Sorting.i"
+	@echo "... softuni-algo/sorting/Sorting.s"
 .PHONY : help
 
 

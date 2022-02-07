@@ -3,8 +3,12 @@
 
 CMakeFiles/algorithms.dir/main.cpp.o: ../main.cpp
 CMakeFiles/algorithms.dir/main.cpp.o: ../softuni-algo/recursion/Recursion.h
+CMakeFiles/algorithms.dir/main.cpp.o: ../softuni-algo/sorting/Sorting.h
 
 CMakeFiles/algorithms.dir/softuni-algo/recursion/Recursion.cpp.o: ../helpers/Helpers.h
 CMakeFiles/algorithms.dir/softuni-algo/recursion/Recursion.cpp.o: ../softuni-algo/recursion/Recursion.cpp
 CMakeFiles/algorithms.dir/softuni-algo/recursion/Recursion.cpp.o: ../softuni-algo/recursion/Recursion.h
+
+CMakeFiles/algorithms.dir/softuni-algo/sorting/Sorting.cpp.o: ../softuni-algo/sorting/Sorting.cpp
+CMakeFiles/algorithms.dir/softuni-algo/sorting/Sorting.cpp.o: ../softuni-algo/sorting/Sorting.h
 

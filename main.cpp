@@ -4,6 +4,7 @@
 #include <queue>
 
 #include "softuni-algo/recursion/Recursion.h"
+#include "softuni-algo/sorting/Sorting.h"
 
 void print(int32_t* arr, size_t n) {
 	std::cout << "[ ";
@@ -62,20 +63,34 @@ void printQueue(std::stack<char> q) {
 }
 
 int main() {
-	Recursion r;
+//	Recursion r;
+//
+//	uint32_t rows, cols;
+//
+//	std::cin >> rows >> cols;
+//	char** laby = consumeMatrixFromStdIn<char>(rows, cols);
+//
+//	std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
+//
+//	r.findAllPathsInLabyrinth(laby, cols, rows, printQueue, 0, 0);
+//
+//	std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+//
+//	std::cout << "Time difference = " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << "[ms]" << std::endl;
 
-	uint32_t rows, cols;
+	Sorting s;
 
-	std::cin >> rows >> cols;
-	char** laby = consumeMatrixFromStdIn<char>(rows, cols);
+	int* dest = new int[5];
 
-	std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
+	dest[0] = 3;
+	dest[1] = 2;
+	dest[2] = 1;
+	dest[3] = 4;
+	dest[4] = 5;
 
-	r.findAllPathsInLabyrinth(laby, cols, rows, printQueue, 0, 0);
+	s.mergeSort(dest, 5);
 
-	std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-
-	std::cout << "Time difference = " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << "[ms]" << std::endl;
+	print(dest, 5);
 
 
 	return 0;

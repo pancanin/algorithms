@@ -6,29 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/Projects/algorithms/main.cpp
+/home/ubuntu/Projects/algorithms/softuni-algo/sorting/Sorting.cpp
 iostream
 -
-string
--
-chrono
--
-queue
--
-softuni-algo/recursion/Recursion.h
-/home/ubuntu/Projects/algorithms/softuni-algo/recursion/Recursion.h
+Sorting.h
+/home/ubuntu/Projects/algorithms/softuni-algo/sorting/Sorting.h
 
-/home/ubuntu/Projects/algorithms/softuni-algo/recursion/Recursion.h
+/home/ubuntu/Projects/algorithms/softuni-algo/sorting/Sorting.h
 cstdint
--
-cstdlib
--
-string
--
-vector
--
-unordered_set
--
-stack
 -
 

@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/algorithms.dir/main.cpp.o"
   "CMakeFiles/algorithms.dir/softuni-algo/recursion/Recursion.cpp.o"
+  "CMakeFiles/algorithms.dir/softuni-algo/sorting/Sorting.cpp.o"
   "algorithms"
   "algorithms.pdb"
 )
