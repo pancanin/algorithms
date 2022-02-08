@@ -17,6 +17,7 @@ public:
 	void mergeSort(int32_t* arr, int32_t n);
 	void merge(int32_t* a, int32_t* b, int32_t aSize, int32_t bSize, int32_t* destination, int32_t destStart);
 
+	void quick(int32_t* a, int32_t start, int32_t end);
 private:
 	void mergeSort(int32_t* arr, int32_t low, int32_t high, int32_t* destination);
 };

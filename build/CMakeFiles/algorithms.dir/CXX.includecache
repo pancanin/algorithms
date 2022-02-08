@@ -9,6 +9,8 @@
 /home/ubuntu/Projects/algorithms/softuni-algo/sorting/Sorting.cpp
 iostream
 -
+cassert
+-
 Sorting.h
 /home/ubuntu/Projects/algorithms/softuni-algo/sorting/Sorting.h
 

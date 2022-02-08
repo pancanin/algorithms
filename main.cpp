@@ -79,18 +79,23 @@ int main() {
 //	std::cout << "Time difference = " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << "[ms]" << std::endl;
 
 	Sorting s;
+	const int32_t n = 8;
 
-	int* dest = new int[5];
+	int* dest = new int[n];
 
-	dest[0] = 3;
-	dest[1] = 2;
-	dest[2] = 1;
-	dest[3] = 4;
-	dest[4] = 5;
+	dest[0] = 7;
+	dest[1] = 11;
+	dest[2] = 3;
+	dest[3] = 6;
+	dest[4] = 1;
+	dest[5] = 10;
+	dest[6] = 5;
+	dest[7] = 7;
 
-	s.mergeSort(dest, 5);
 
-	print(dest, 5);
+	s.quick(dest, 0, n - 1);
+
+	print(dest, n);
 
 
 	return 0;
