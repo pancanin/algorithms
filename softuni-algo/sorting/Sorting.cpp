@@ -74,3 +74,25 @@ void Sorting::quick(int32_t* a, int32_t start, int32_t end) {
 		}
 	}
 }
+
+int32_t Sorting::binarySearch(int32_t* arr, int32_t n, int32_t needle) {
+	return binarySearch(arr, needle, 0, n - 1);
+}
+
+int32_t Sorting::binarySearch(int32_t* arr, int32_t needle, int32_t start, int32_t end) {
+	if (start > end) {
+		return -1;
+	}
+
+	int32_t mid = start + ((end - start) / 2);
+
+	if (arr[mid] == needle) {
+		return mid;
+	}
+
+	if (arr[mid] < needle) {
+		return binarySearch(arr, needle, mid + 1, end);
+	} else {
+		return binarySearch(arr, needle, start, mid);
+	}
+}

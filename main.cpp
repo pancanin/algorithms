@@ -2,9 +2,11 @@
 #include <string>
 #include <chrono>
 #include <queue>
+#include <sstream>
 
 #include "softuni-algo/recursion/Recursion.h"
 #include "softuni-algo/sorting/Sorting.h"
+#include "softuni-algo/graphs/ConnectedComponents.h"
 
 void print(int32_t* arr, size_t n) {
 	std::cout << "[ ";
@@ -78,25 +80,80 @@ int main() {
 //
 //	std::cout << "Time difference = " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << "[ms]" << std::endl;
 
-	Sorting s;
-	const int32_t n = 8;
+//	Sorting s;
+//	const int32_t n = 8;
+//
+//	int* dest = new int[n];
+//
+//	dest[0] = 1;
+//	dest[1] = 2;
+//	dest[2] = 3;
+//	dest[3] = 4;
+//	dest[4] = 5;
+//	dest[5] = 6;
+//	dest[6] = 7;
+//	dest[7] = 8;
+//
+//
+//	std::cout << s.binarySearch(dest, 8, 5) << std::endl;
+//
+//	print(dest, n);
 
-	int* dest = new int[n];
 
-	dest[0] = 7;
-	dest[1] = 11;
-	dest[2] = 3;
-	dest[3] = 6;
-	dest[4] = 1;
-	dest[5] = 10;
-	dest[6] = 5;
-	dest[7] = 7;
+	/**
+	 * Test data:
+9
+3 6
+3 4 5 6
+8
+0 1 5
+1 6
+1 3
+0 1 4
 
+2
+	 */
+	ConnectedComponents c;
+	c.init(9);
 
-	s.quick(dest, 0, n - 1);
+	int n;
 
-	print(dest, n);
+	std::cin >> n;
+	std::string line;
+	getline(std::cin, line);
 
+	for (int i = 0; i < n; i++) {
+
+		getline(std::cin, line);
+		std::istringstream lineStream(line);
+
+		int num;
+		std::vector<int> numbers;
+
+		while (lineStream >> num) {
+			numbers.push_back(num);
+		}
+
+		c.add(i, numbers);
+	}
+
+	c.visitNeighbours(0);
+
+	std::cout << "------------------------" << std::endl;
+
+	std::vector<std::vector<int>> cc = c.findConnectedComponents();
+
+	for (std::vector c : cc) {
+		for (int n : c) {
+			std::cout << n << " ";
+		}
+		std::cout << std::endl;
+	}
+	std::cout << std::endl;
+
+	c.print();
+
+	c.deinit();
 
 	return 0;
 }
