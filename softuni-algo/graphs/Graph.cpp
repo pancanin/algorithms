@@ -34,10 +34,18 @@ void Graph::print() {
 	}
 }
 
-std::list<Node*> Graph::sortTop() {
-	std::list<Node*> l;
+std::list<std::list<Node*>> Graph::sortTop() {
+	std::list<std::list<Node*>> allTopologicalSortings;
 
-	return l;
+	std::unordered_set<int32_t> independentNodeIds = getIndependentNodes();
+
+	for (int id : independentNodeIds) {
+		std::list<Node*> dfsPath = walkDFS(id);
+		dfsPath.reverse();
+		allTopologicalSortings.push_back(dfsPath);
+	}
+
+	return allTopologicalSortings;
 }
 
 std::list<Node*> Graph::walkDFS(int32_t startNodeId) {
@@ -63,4 +71,24 @@ void Graph::walkDFS(int32_t current, std::list<Node*>& path, std::unordered_set<
 	}
 
 	path.push_back(index[current]);
+}
+
+std::unordered_set<int32_t> Graph::getIndependentNodes() {
+	std::unordered_set<int32_t> referencedNodeIds;
+
+	for (auto const& [id, node] : index) {
+		for (Node* n : node->connectedNodes) {
+			referencedNodeIds.insert(n->id);
+		}
+	}
+
+	std::unordered_set<int32_t> notReferencedNodeIds;
+
+	for (auto const& [id, node] : index) {
+		if (referencedNodeIds.find(id) == referencedNodeIds.end()) {
+			notReferencedNodeIds.insert(id);
+		}
+	}
+
+	return notReferencedNodeIds;
 }

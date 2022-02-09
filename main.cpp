@@ -162,10 +162,12 @@ Another test data:
 
 	 *
 	 */
-	std::list<Node*> dfsPath = g.walkDFS(0);
+	std::list<std::list<Node*>> topSorts = g.sortTop();
 
-	for (Node* n : dfsPath) {
-		std::cout << n->id << std::endl;
+	for (std::list<Node*> l : topSorts) {
+		for (Node* n : l) {
+			std::cout << n->id << std::endl;
+		}
 	}
 
 	return 0;

@@ -21,10 +21,10 @@ public:
 	void print();
 
 	/* Algorithms */
-	std::list<Node*> sortTop();
+	std::list<std::list<Node*>> sortTop();
 
 	std::list<Node*> walkDFS(int32_t startNodeId);
-	std::vector<Node*> getIndependentNodes();
+	std::unordered_set<int32_t> getIndependentNodes();
 private:
 	std::unordered_map<int32_t, Node*> index;
 
