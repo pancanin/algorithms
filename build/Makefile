@@ -177,6 +177,33 @@ softuni-algo/graphs/ConnectedComponents.cpp.s:
 	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/softuni-algo/graphs/ConnectedComponents.cpp.s
 .PHONY : softuni-algo/graphs/ConnectedComponents.cpp.s
 
+softuni-algo/graphs/Graph.o: softuni-algo/graphs/Graph.cpp.o
+
+.PHONY : softuni-algo/graphs/Graph.o
+
+# target to build an object file
+softuni-algo/graphs/Graph.cpp.o:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/softuni-algo/graphs/Graph.cpp.o
+.PHONY : softuni-algo/graphs/Graph.cpp.o
+
+softuni-algo/graphs/Graph.i: softuni-algo/graphs/Graph.cpp.i
+
+.PHONY : softuni-algo/graphs/Graph.i
+
+# target to preprocess a source file
+softuni-algo/graphs/Graph.cpp.i:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/softuni-algo/graphs/Graph.cpp.i
+.PHONY : softuni-algo/graphs/Graph.cpp.i
+
+softuni-algo/graphs/Graph.s: softuni-algo/graphs/Graph.cpp.s
+
+.PHONY : softuni-algo/graphs/Graph.s
+
+# target to generate assembly for a file
+softuni-algo/graphs/Graph.cpp.s:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/softuni-algo/graphs/Graph.cpp.s
+.PHONY : softuni-algo/graphs/Graph.cpp.s
+
 softuni-algo/recursion/Recursion.o: softuni-algo/recursion/Recursion.cpp.o
 
 .PHONY : softuni-algo/recursion/Recursion.o
@@ -246,6 +273,9 @@ help:
 	@echo "... softuni-algo/graphs/ConnectedComponents.o"
 	@echo "... softuni-algo/graphs/ConnectedComponents.i"
 	@echo "... softuni-algo/graphs/ConnectedComponents.s"
+	@echo "... softuni-algo/graphs/Graph.o"
+	@echo "... softuni-algo/graphs/Graph.i"
+	@echo "... softuni-algo/graphs/Graph.s"
 	@echo "... softuni-algo/recursion/Recursion.o"
 	@echo "... softuni-algo/recursion/Recursion.i"
 	@echo "... softuni-algo/recursion/Recursion.s"

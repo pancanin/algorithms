@@ -3,10 +3,14 @@
 #include <chrono>
 #include <queue>
 #include <sstream>
+#include <unordered_set>
+#include <list>
 
 #include "softuni-algo/recursion/Recursion.h"
 #include "softuni-algo/sorting/Sorting.h"
 #include "softuni-algo/graphs/ConnectedComponents.h"
+#include "softuni-algo/graphs/Node.h"
+#include "softuni-algo/graphs/Graph.h"
 
 void print(int32_t* arr, size_t n) {
 	std::cout << "[ ";
@@ -112,9 +116,18 @@ int main() {
 0 1 4
 
 2
+
+Another test data:
+7
+
+2 6
+1
+4
+3
+
+1
 	 */
-	ConnectedComponents c;
-	c.init(9);
+	Graph g;
 
 	int n;
 
@@ -128,32 +141,32 @@ int main() {
 		std::istringstream lineStream(line);
 
 		int num;
-		std::vector<int> numbers;
+		std::unordered_set<int> numbers;
 
 		while (lineStream >> num) {
-			numbers.push_back(num);
+			numbers.insert(num);
 		}
 
-		c.add(i, numbers);
+		g.addOneWay(i, numbers);
 	}
 
-	c.visitNeighbours(0);
+	g.print();
 
-	std::cout << "------------------------" << std::endl;
+	/* Topological sorting data
+6
+1 2
+3 4
+5
+2 5
+3
 
-	std::vector<std::vector<int>> cc = c.findConnectedComponents();
+	 *
+	 */
+	std::list<Node*> dfsPath = g.walkDFS(0);
 
-	for (std::vector c : cc) {
-		for (int n : c) {
-			std::cout << n << " ";
-		}
-		std::cout << std::endl;
+	for (Node* n : dfsPath) {
+		std::cout << n->id << std::endl;
 	}
-	std::cout << std::endl;
-
-	c.print();
-
-	c.deinit();
 
 	return 0;
 }

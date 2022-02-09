@@ -3,6 +3,7 @@
 
 CMakeFiles/algorithms.dir/main.cpp.o: ../main.cpp
 CMakeFiles/algorithms.dir/main.cpp.o: ../softuni-algo/graphs/ConnectedComponents.h
+CMakeFiles/algorithms.dir/main.cpp.o: ../softuni-algo/graphs/Graph.h
 CMakeFiles/algorithms.dir/main.cpp.o: ../softuni-algo/graphs/Node.h
 CMakeFiles/algorithms.dir/main.cpp.o: ../softuni-algo/recursion/Recursion.h
 CMakeFiles/algorithms.dir/main.cpp.o: ../softuni-algo/sorting/Sorting.h
@@ -10,6 +11,10 @@ CMakeFiles/algorithms.dir/main.cpp.o: ../softuni-algo/sorting/Sorting.h
 CMakeFiles/algorithms.dir/softuni-algo/graphs/ConnectedComponents.cpp.o: ../softuni-algo/graphs/ConnectedComponents.cpp
 CMakeFiles/algorithms.dir/softuni-algo/graphs/ConnectedComponents.cpp.o: ../softuni-algo/graphs/ConnectedComponents.h
 CMakeFiles/algorithms.dir/softuni-algo/graphs/ConnectedComponents.cpp.o: ../softuni-algo/graphs/Node.h
+
+CMakeFiles/algorithms.dir/softuni-algo/graphs/Graph.cpp.o: ../softuni-algo/graphs/Graph.cpp
+CMakeFiles/algorithms.dir/softuni-algo/graphs/Graph.cpp.o: ../softuni-algo/graphs/Graph.h
+CMakeFiles/algorithms.dir/softuni-algo/graphs/Graph.cpp.o: ../softuni-algo/graphs/Node.h
 
 CMakeFiles/algorithms.dir/softuni-algo/recursion/Recursion.cpp.o: ../helpers/Helpers.h
 CMakeFiles/algorithms.dir/softuni-algo/recursion/Recursion.cpp.o: ../softuni-algo/recursion/Recursion.cpp

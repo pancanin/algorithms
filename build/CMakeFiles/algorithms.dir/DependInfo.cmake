@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/ubuntu/Projects/algorithms/main.cpp" "/home/ubuntu/Projects/algorithms/build/CMakeFiles/algorithms.dir/main.cpp.o"
   "/home/ubuntu/Projects/algorithms/softuni-algo/graphs/ConnectedComponents.cpp" "/home/ubuntu/Projects/algorithms/build/CMakeFiles/algorithms.dir/softuni-algo/graphs/ConnectedComponents.cpp.o"
+  "/home/ubuntu/Projects/algorithms/softuni-algo/graphs/Graph.cpp" "/home/ubuntu/Projects/algorithms/build/CMakeFiles/algorithms.dir/softuni-algo/graphs/Graph.cpp.o"
   "/home/ubuntu/Projects/algorithms/softuni-algo/recursion/Recursion.cpp" "/home/ubuntu/Projects/algorithms/build/CMakeFiles/algorithms.dir/softuni-algo/recursion/Recursion.cpp.o"
   "/home/ubuntu/Projects/algorithms/softuni-algo/sorting/Sorting.cpp" "/home/ubuntu/Projects/algorithms/build/CMakeFiles/algorithms.dir/softuni-algo/sorting/Sorting.cpp.o"
   )

@@ -12,6 +12,8 @@ add_executable(${PROJECT_NAME}
 	${DIR}/softuni-algo/sorting/Sorting.cpp
 	${DIR}/softuni-algo/graphs/ConnectedComponents.h
 	${DIR}/softuni-algo/graphs/ConnectedComponents.cpp
+	${DIR}/softuni-algo/graphs/Graph.h
+	${DIR}/softuni-algo/graphs/Graph.cpp
 	${DIR}/softuni-algo/graphs/Node.h
 	${DIR}/helpers/Helpers.h
 )

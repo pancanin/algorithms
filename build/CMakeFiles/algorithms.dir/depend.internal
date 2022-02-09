@@ -4,12 +4,17 @@
 CMakeFiles/algorithms.dir/main.cpp.o
  /home/ubuntu/Projects/algorithms/main.cpp
  /home/ubuntu/Projects/algorithms/softuni-algo/graphs/ConnectedComponents.h
+ /home/ubuntu/Projects/algorithms/softuni-algo/graphs/Graph.h
  /home/ubuntu/Projects/algorithms/softuni-algo/graphs/Node.h
  /home/ubuntu/Projects/algorithms/softuni-algo/recursion/Recursion.h
  /home/ubuntu/Projects/algorithms/softuni-algo/sorting/Sorting.h
 CMakeFiles/algorithms.dir/softuni-algo/graphs/ConnectedComponents.cpp.o
  /home/ubuntu/Projects/algorithms/softuni-algo/graphs/ConnectedComponents.cpp
  /home/ubuntu/Projects/algorithms/softuni-algo/graphs/ConnectedComponents.h
+ /home/ubuntu/Projects/algorithms/softuni-algo/graphs/Node.h
+CMakeFiles/algorithms.dir/softuni-algo/graphs/Graph.cpp.o
+ /home/ubuntu/Projects/algorithms/softuni-algo/graphs/Graph.cpp
+ /home/ubuntu/Projects/algorithms/softuni-algo/graphs/Graph.h
  /home/ubuntu/Projects/algorithms/softuni-algo/graphs/Node.h
 CMakeFiles/algorithms.dir/softuni-algo/recursion/Recursion.cpp.o
  ../helpers/Helpers.h
